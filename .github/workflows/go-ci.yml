@@ -19,6 +19,8 @@ jobs:
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
+        # TODO Enable GO CI when the project has apps, examples and pkgs to check
+        continue-on-error: true
         with:
           run: imports
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -32,6 +34,8 @@ jobs:
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
+        # TODO Enable GO CI when the project has apps, examples and pkgs to check
+        continue-on-error: true
         with:
           run: errcheck
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -45,6 +49,8 @@ jobs:
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
+        # TODO Enable GO CI when the project has apps, examples and pkgs to check
+        continue-on-error: true
         with:
           run: lint
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -58,6 +64,8 @@ jobs:
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
+        # TODO Enable GO CI when the project has apps, examples and pkgs to check
+        continue-on-error: true
         with:
           run: shadow
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -71,6 +79,8 @@ jobs:
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
+        # TODO Enable GO CI when the project has apps, examples and pkgs to check
+        continue-on-error: true
         with:
           run: staticcheck
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -84,6 +94,8 @@ jobs:
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
+        # TODO Enable GO CI when the project has apps, examples and pkgs to check
+        continue-on-error: true
         with:
           run: sec
           token: ${{ secrets.GITHUB_TOKEN }}
