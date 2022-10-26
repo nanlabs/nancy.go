@@ -13,14 +13,14 @@ jobs:
   imports:
     name: Imports
     runs-on: ubuntu-latest
+    # TODO Enable GO CI when the project has apps, examples and pkgs to check
+    continue-on-error: true
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
-        # TODO Enable GO CI when the project has apps, examples and pkgs to check
-        continue-on-error: true
         with:
           run: imports
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -28,14 +28,14 @@ jobs:
   errcheck:
     name: Errcheck
     runs-on: ubuntu-latest
+    # TODO Enable GO CI when the project has apps, examples and pkgs to check
+    continue-on-error: true
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
-        # TODO Enable GO CI when the project has apps, examples and pkgs to check
-        continue-on-error: true
         with:
           run: errcheck
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -43,14 +43,14 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
+    # TODO Enable GO CI when the project has apps, examples and pkgs to check
+    continue-on-error: true
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
-        # TODO Enable GO CI when the project has apps, examples and pkgs to check
-        continue-on-error: true
         with:
           run: lint
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -58,14 +58,14 @@ jobs:
   shadow:
     name: Shadow
     runs-on: ubuntu-latest
+    # TODO Enable GO CI when the project has apps, examples and pkgs to check
+    continue-on-error: true
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
-        # TODO Enable GO CI when the project has apps, examples and pkgs to check
-        continue-on-error: true
         with:
           run: shadow
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -73,14 +73,14 @@ jobs:
   staticcheck:
     name: StaticCheck
     runs-on: ubuntu-latest
+    # TODO Enable GO CI when the project has apps, examples and pkgs to check
+    continue-on-error: true
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
-        # TODO Enable GO CI when the project has apps, examples and pkgs to check
-        continue-on-error: true
         with:
           run: staticcheck
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -88,14 +88,14 @@ jobs:
   sec:
     name: Sec
     runs-on: ubuntu-latest
+    # TODO Enable GO CI when the project has apps, examples and pkgs to check
+    continue-on-error: true
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
 
       - name: check
         uses: grandcolline/golang-github-actions@v1.1.0
-        # TODO Enable GO CI when the project has apps, examples and pkgs to check
-        continue-on-error: true
         with:
           run: sec
           token: ${{ secrets.GITHUB_TOKEN }}
