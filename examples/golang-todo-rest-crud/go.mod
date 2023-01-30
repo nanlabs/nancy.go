@@ -1,6 +1,6 @@
 module todo-api-golang
 
-go 1.18
+go 1.19
 
 require (
 	github.com/didip/tollbooth/v7 v7.0.1
