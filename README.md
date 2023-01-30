@@ -38,7 +38,7 @@ Collection of examples that solve specific problems using small pieces of code.
 
 We have a collection of examples that solve specific problems using small pieces of code. Each example has its own README file with more details about the example. Check out the [examples](./examples/) directory for more details!
 
-- [Todo REST API](./examples/golang-todo-rest-crud/README.md)): REST API to create, update and retrieve ToDos, including grateful shutdown, rate limiting, structured logging, unit tests, integration tests, environment variables, health check and API documentation with swagger. Technologies: Golang 1.19, MongoDB (with Docker Compose), Gorilla Mux, Go Swagger, Tollbooth (rate limiting), Zap (logging), Viper, Mockery, Makefile, Pre-commit, and DockerTest (integration tests).
+- [Todo REST API](./examples/golang-todo-rest-crud/README.md): REST API to create, update and retrieve ToDos, including grateful shutdown, rate limiting, structured logging, unit tests, integration tests, environment variables, health check and API documentation with swagger. Technologies: Golang 1.19, MongoDB (with Docker Compose), Gorilla Mux, Go Swagger, Tollbooth (rate limiting), Zap (logging), Viper, Mockery, Makefile, Pre-commit, and DockerTest (integration tests).
 
 ## Contributing
 
