@@ -1,9 +1,5 @@
 # ToDo API proof of concept
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/chelodoz/todo-api-golang)](https://goreportcard.com/report/github.com/chelodoz/todo-api-golang)
-[![ci](https://github.com/chelodoz/todo-api-golang/actions/workflows/ci.yml/badge.svg)](https://github.com/chelodoz/todo-api-golang/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/chelodoz/todo-api-golang/branch/main/graph/badge.svg)](https://codecov.io/gh/chelodoz/todo-api-golang)
-
 - [Introduction](#introduction)
 - [Environment](#environment)
 - [Docker](#docker)
