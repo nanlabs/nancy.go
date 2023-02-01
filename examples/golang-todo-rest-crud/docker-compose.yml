@@ -11,7 +11,7 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./internal/platform/mongo/initdb.d:/docker-entrypoint-initdb.d:ro
+      - ./docker/mongo/initdb.d:/docker-entrypoint-initdb.d:ro
       - mongo:/data/db
     healthcheck:
       test: echo 'db.runCommand("ping").ok' | mongo 127.0.0.1:27017/test --quiet
@@ -44,7 +44,7 @@ services:
     container_name: todoapi
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./docker/todo/Dockerfile
     image: todoapi
     ports:
       - 8080:8080
