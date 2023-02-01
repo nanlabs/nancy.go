@@ -12,6 +12,7 @@ build:
 
 run: build
 	@./bin/todo
+.PHONY: run
 
 unittest:
 	@go test -v ./... -cover
