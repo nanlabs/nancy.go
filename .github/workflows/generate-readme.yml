@@ -29,9 +29,6 @@ jobs:
 
       - name: Generate README
         run: |
-          # Get the list of examples previously downloaded
-          EXAMPLES=$(ls examples-*.json)
-
           # Generate the README
           ./awesome-nan/tools/readme-generator/main.ts README.md.tmpl examples.json
 
