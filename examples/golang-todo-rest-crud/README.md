@@ -55,15 +55,15 @@ Welcome! 👋
 
 The purpose of this project is to make a simple proof of concept of a RESTful API using Go and gorilla/mux.
 
-If you haven't met Go before, you should visit Go's website [here](https://go.dev/). For instructions on how to install Go, see the docs [here](https://go.dev/learn/).
+You should visit Go's website [here](https://go.dev/) if you have yet to meet Go. For instructions on how to install Go, see the docs [here](https://go.dev/learn/).
 
-This project was developed using go v1.9.4
+We developed this project using Go v1.9.4
 
 ## Environment
 
-For the handling of environment variables and the reading of .env/.json/.yaml files, the [Viper]("https://github.com/spf13/viper") library was used.
+We used the [Viper]("https://github.com/spf13/viper") library to handle environment variables, and reading these from `.env`, `.json`, or `.yaml` files,
 
-The `.env.example` file is included in the root directory to provide development environment variables change it to `.env` to make it work.
+The `.env.example` file is included in the root directory to provide development environment variables. Rename it to `.env` to make it usable.
 
 ## Docker
 
