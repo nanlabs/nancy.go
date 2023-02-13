@@ -53,9 +53,9 @@
 
 Welcome! 👋
 
-The end goal of this project is to make a simple proof of concept of a RESTful API with Go using gorilla/mux.
+The purpose of this project is to make a simple proof of concept of a RESTful API using Go and gorilla/mux.
 
-If you're have not encountered Go before, you should visit this website [here](https://golang.org/doc/install).
+If you haven't met Go before, you should visit Go's website [here](https://go.dev/). For instructions on how to install Go, see the docs [here](https://go.dev/learn/).
 
 This project was developed using go v1.9.4
 
