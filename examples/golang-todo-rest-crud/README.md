@@ -97,14 +97,13 @@ The [Make File]("https://linuxhint.com/install-make-ubuntu/") library was used t
 
 ## Unit test coverage
 
-Use the command `make unittest` to run all the unit tests including coverage
+Use the command `make unittest` to run all the unit tests, including coverage.
 
 ## Integration test
 
-In order to perform integrations tests using real requests the following package was used [Dockertest]("https://github.com/ory/dockertest").
-The idea behind this is to create two containers one for the api and the other for mongo db completely separate from the development containers, run the integration tests by making calls to the test api and then delete both containers.
+We used the [Dockertest]("https://github.com/ory/dockertest") package to perform integrations tests. The idea behind this is to create two containers, one for the TODO API, and one for MongoDB; effectively separating the integration environment from the development environment. Run the integration tests by making requests to the test api, and finally deleting both containers.
 
-Use the command `make integrationtest` to run all the integration tests
+Use the command `make integrationtest` to run all the integration tests.
 
 ## Swagger
 
