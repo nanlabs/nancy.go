@@ -67,15 +67,17 @@ The `.env.example` file is included in the root directory to provide development
 
 ## Docker
 
-For the creation of the mongo db and mongodb express in docker the following repository was taken as a reference [NaN Labs Devops reference](https://github.com/nanlabs/devops-reference/tree/main/examples/docker/mongodb).
+We used the [NaN Labs Devops reference](https://github.com/nanlabs/devops-reference/tree/main/examples/docker/mongodb) repository to create MongoDB and MongoDB Express containers.
 
 ## Run
 
-To run the code, you will need docker and docker-compose installed on your machine. In the project root, run `docker compose up --build -d` or `make dcbuild` if you have make file installed to create and start all the containers..
+To run the code, you will need docker and docker-compose installed on your machine; see the docs [here](https://docs.docker.com/get-started/08_using_compose/). In the project root, run `docker compose up --build -d` or `make dcbuild` if you have make installed to create and start all the containers.
 
-You can run it `manually without docker` using the command `go run ./cmd/todo` or `make run`, to make it work, the environment variable `MONGO_HOST=localhost` must be changed in the .env file to `localhost` instead of the mongo container name.
+> Executing the entire solution in containers requires the 'MONGO_HOST' env variable to be set to 'mongodb', like this: MONGO_HOST=mongodb
 
-Note that if you plan to run all in containers the env variable must be the container name `MONGO_HOST=mongodb`
+To run the TODO API on your local environment, and have it consuming MongoDB on Docker, use the command `go run ./cmd/todo` or `make run`, to make it work.
+
+> Executing the TODO API on the local environmet requires the 'MONGO_HOST' env variable to be set to 'localhost', like this: MONGO_HOST=localhost
 
 After that, you have a RESTful API that is running at `http://127.0.0.1:8080`.
 
