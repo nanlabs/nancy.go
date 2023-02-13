@@ -107,23 +107,23 @@ Use the command `make integrationtest` to run all the integration tests.
 
 ## Swagger
 
-For the api documentation [Go swagger]("https://goswagger.io/") was the choice, using design first approach the documentation can be generated through code notes.
+We choose [Go swagger]("https://goswagger.io/") for the api documentation. Using the "design first" approach, the documentation can be generated through code annotations.
 
-Run `go install github.com/go-swagger/go-swagger/cmd/swagger` to install mockery CLI.
+To install mockery CLI, run `go install github.com/go-swagger/go-swagger/cmd/swagger`.
 
-Use the command `make swagger` to generate the /docs/swagger.yaml and third_party/swagger-ui-4.11.1/swagger.json files from the go-swagger models.
+Use the command `make swagger` to generate the `/docs/swagger.yaml` and `third_party/swagger-ui-4.11.1/swagger.json` files from the go-swagger models.
 
 ## Generate mocks
 
-For generating mocks [Mockery]("https://github.com/vektra/mockery") package was used.
+We used [Mockery]("https://github.com/vektra/mockery") to generate the mocks.
 
 Run `go install github.com/vektra/mockery/v2@latest` to install mockery CLI.
 
-Use the command `make mocks` to generate the mocks of the interfaces in /internal/todo/note folder.
+Use the command `make mocks` to generate the mocks of the interfaces in `/internal/todo/note` folder.
 
 ## Graceful shutdown
 
-A `graceful shutdown in a process` is when the OS (operating system) can safely shut down its processes and close all connections, taking as much time as needed.
+A `graceful shutdown in a process` is when the OS (operating system) can safely shutdown its processes and close all connections, taking as much time as needed.
 
 To be able to achieve that, one has to listen to [Termination signals]("https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html") that are sent to the application by the process manager, and act accordingly. A delay of 30 seconds was implemented at the moment of listening for a termination signal in order to shut down the server.
 
