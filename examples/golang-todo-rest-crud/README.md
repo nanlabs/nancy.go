@@ -53,29 +53,31 @@
 
 Welcome! 👋
 
-The end goal of this project is to make a simple proof of concept of a RESTful API with Go using gorilla/mux.
+The purpose of this project is to make a simple proof of concept of a RESTful API using Go and gorilla/mux.
 
-If you're have not encountered Go before, you should visit this website [here](https://golang.org/doc/install).
+You should visit Go's website [here](https://go.dev/) if you have yet to meet Go. For instructions on how to install Go, see the docs [here](https://go.dev/learn/).
 
-This project was developed using go v1.9.4
+We developed this project using Go v1.9.4
 
 ## Environment
 
-For the handling of environment variables and the reading of .env/.json/.yaml files, the [Viper]("https://github.com/spf13/viper") library was used.
+We used the [Viper]("https://github.com/spf13/viper") library to handle environment variables, and reading these from `.env`, `.json`, or `.yaml` files,
 
-The `.env.example` file is included in the root directory to provide development environment variables change it to `.env` to make it work.
+The `.env.example` file is included in the root directory to provide development environment variables. Rename it to `.env` to make it usable.
 
 ## Docker
 
-For the creation of the mongo db and mongodb express in docker the following repository was taken as a reference [NaN Labs Devops reference](https://github.com/nanlabs/devops-reference/tree/main/examples/docker/mongodb).
+We used the [NaN Labs Devops reference](https://github.com/nanlabs/devops-reference/tree/main/examples/docker/mongodb) repository to create MongoDB and MongoDB Express containers.
 
 ## Run
 
-To run the code, you will need docker and docker-compose installed on your machine. In the project root, run `docker compose up --build -d` or `make dcbuild` if you have make file installed to create and start all the containers..
+To run the code, you will need docker and docker-compose installed on your machine; see the docs [here](https://docs.docker.com/get-started/08_using_compose/). In the project root, run `docker compose up --build -d` or `make dcbuild` if you have make installed to create and start all the containers.
 
-You can run it `manually without docker` using the command `go run ./cmd/todo` or `make run`, to make it work, the environment variable `MONGO_HOST=localhost` must be changed in the .env file to `localhost` instead of the mongo container name.
+> Executing the entire solution in containers requires the 'MONGO_HOST' env variable to be set to 'mongodb', like this: MONGO_HOST=mongodb
 
-Note that if you plan to run all in containers the env variable must be the container name `MONGO_HOST=mongodb`
+To run the TODO API on your local environment, and have it consuming MongoDB on Docker, use the command `go run ./cmd/todo` or `make run`, to make it work.
+
+> Executing the TODO API on the local environmet requires the 'MONGO_HOST' env variable to be set to 'localhost', like this: MONGO_HOST=localhost
 
 After that, you have a RESTful API that is running at `http://127.0.0.1:8080`.
 
@@ -95,34 +97,33 @@ The [Make File]("https://linuxhint.com/install-make-ubuntu/") library was used t
 
 ## Unit test coverage
 
-Use the command `make unittest` to run all the unit tests including coverage
+Use the command `make unittest` to run all the unit tests, including coverage.
 
 ## Integration test
 
-In order to perform integrations tests using real requests the following package was used [Dockertest]("https://github.com/ory/dockertest").
-The idea behind this is to create two containers one for the api and the other for mongo db completely separate from the development containers, run the integration tests by making calls to the test api and then delete both containers.
+We used the [Dockertest]("https://github.com/ory/dockertest") package to perform integrations tests. The idea behind this is to create two containers, one for the TODO API, and one for MongoDB; effectively separating the integration environment from the development environment. Run the integration tests by making requests to the test api, and finally deleting both containers.
 
-Use the command `make integrationtest` to run all the integration tests
+Use the command `make integrationtest` to run all the integration tests.
 
 ## Swagger
 
-For the api documentation [Go swagger]("https://goswagger.io/") was the choice, using design first approach the documentation can be generated through code notes.
+We choose [Go swagger]("https://goswagger.io/") for the api documentation. Using the "design first" approach, the documentation can be generated through code annotations.
 
-Run `go install github.com/go-swagger/go-swagger/cmd/swagger` to install mockery CLI.
+To install mockery CLI, run `go install github.com/go-swagger/go-swagger/cmd/swagger`.
 
-Use the command `make swagger` to generate the /docs/swagger.yaml and third_party/swagger-ui-4.11.1/swagger.json files from the go-swagger models.
+Use the command `make swagger` to generate the `/docs/swagger.yaml` and `third_party/swagger-ui-4.11.1/swagger.json` files from the go-swagger models.
 
 ## Generate mocks
 
-For generating mocks [Mockery]("https://github.com/vektra/mockery") package was used.
+We used [Mockery]("https://github.com/vektra/mockery") to generate the mocks.
 
 Run `go install github.com/vektra/mockery/v2@latest` to install mockery CLI.
 
-Use the command `make mocks` to generate the mocks of the interfaces in /internal/todo/note folder.
+Use the command `make mocks` to generate the mocks of the interfaces in `/internal/todo/note` folder.
 
 ## Graceful shutdown
 
-A `graceful shutdown in a process` is when the OS (operating system) can safely shut down its processes and close all connections, taking as much time as needed.
+A `graceful shutdown in a process` is when the OS (operating system) can safely shutdown its processes and close all connections, taking as much time as needed.
 
 To be able to achieve that, one has to listen to [Termination signals]("https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html") that are sent to the application by the process manager, and act accordingly. A delay of 30 seconds was implemented at the moment of listening for a termination signal in order to shut down the server.
 
