@@ -1,3 +1,4 @@
+// Package utils provides the general utilities functionalities for the integrations
 package utils
 
 import "errors"
