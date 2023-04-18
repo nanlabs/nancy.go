@@ -16,7 +16,7 @@
 </div>
 <div align="center">
 
-[![Continious Integration][cibadge]][ciurl]
+[![Continuos Integration][cibadge]][ciurl]
 [![License: MIT][licensebadge]][licenseurl]
 
 </div>
@@ -26,14 +26,22 @@ We also provide reusable GO packages.
 
 ## Contents
 
-- [Applications](#applications)
-
+- [Contents](#contents)
+- [Examples](#examples)
+  - [Application](#application)
+  - [Packages](#packages)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 
-## Applications
+## Examples
+
+### Application
 
 - [Golang REST API boilerplate](https://github.com/nanlabs/nancy.go/tree/main/examples/golang-todo-rest-crud/) - REST API to create, update and retrieve Entities, including graceful shutdown, rate limiting, structured logging, unit tests, integration tests, environment variables, health check and API documentation with swagger. Technologies: Golang 1.19, MongoDB (with Docker Compose), Gorilla Mux, Go Swagger, Tollbooth (rate limiting), Zap (logging), Viper, Mockery, Makefile, Pre-commit, and DockerTest (integration tests). _Keywords: Golang, REST API, MongoDB, Gorilla Mux, Go Swagger, Tollbooth, Zap, Viper, Mockery, Makefile, Pre-commit, Docker, Docker Compose, DockerTest_
+
+### Packages
+
+- [Utils](./examples/utils/) - These examples shows the implementation of functionalities that can be reused independently from the implementation making usage of generics. _Keywords: Golang, Generics, Utils, Batch Slice, Buffer to Object, Contains_
 
 ## Contributing
 
