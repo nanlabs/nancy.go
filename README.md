@@ -26,14 +26,16 @@ We also provide reusable GO packages.
 
 ## Contents
 
-- [Applications](#applications)
+- [Apps and Boilerplates](#apps-and-boilerplates)
 
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 
-## Applications
+## Apps and Boilerplates
 
-- [Golang REST API boilerplate](https://github.com/nanlabs/nancy.go/tree/main/examples/golang-todo-rest-crud/) - REST API to create, update and retrieve Entities, including graceful shutdown, rate limiting, structured logging, unit tests, integration tests, environment variables, health check and API documentation with swagger. Technologies: Golang 1.19, MongoDB (with Docker Compose), Gorilla Mux, Go Swagger, Tollbooth (rate limiting), Zap (logging), Viper, Mockery, Makefile, Pre-commit, and DockerTest (integration tests). _Keywords: Golang, REST API, MongoDB, Gorilla Mux, Go Swagger, Tollbooth, Zap, Viper, Mockery, Makefile, Pre-commit, Docker, Docker Compose, DockerTest_
+| Name                                                                                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                     | Keywords                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Golang REST API boilerplate](https://github.com/nanlabs/nancy.go/tree/main/examples/golang-todo-rest-crud/) | REST API to create, update and retrieve Entities, including graceful shutdown, rate limiting, structured logging, unit tests, integration tests, environment variables, health check and API documentation with swagger. Technologies: Golang 1.19, MongoDB (with Docker Compose), Gorilla Mux, Go Swagger, Tollbooth (rate limiting), Zap (logging), Viper, Mockery, Makefile, Pre-commit, and DockerTest (integration tests). | _Golang_, _REST API_, _MongoDB_, _Gorilla Mux_, _Go Swagger_, _Tollbooth_, _Zap_, _Viper_, _Mockery_, _Makefile_, _Pre-commit_, _Docker_, _Docker Compose_, _DockerTest_ |
 
 ## Contributing
 
